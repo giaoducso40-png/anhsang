@@ -670,7 +670,7 @@
     }
 
     .teacher-placeholder .big { font-size: 4rem; margin-bottom: 10px; }
-    .teacher-copy h3 { margin: 0 0 12px; font-size: 2rem; letter-spacing: -0.6px; }
+    .teacher-copy h3 { margin: 0 0 12px; font-size: clamp(1.55rem, 2.4vw, 2rem); line-height: 1.2; letter-spacing: -0.6px; }
     .teacher-copy p { margin: 0; line-height: 1.75; color: #475569; font-size: 1.08rem; }
 
     .pill-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
@@ -920,6 +920,10 @@
       overflow-wrap: break-word;
       word-break: normal;
     }
+    :is(.hero h1, .section-title, .teacher-copy h3, .resource-card h3, .exercise-card h3) {
+      text-wrap: balance;
+    }
+    .keep-phrase { white-space: nowrap; }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       .reveal, .chat-toggle { animation: none; transition: none; }
@@ -1231,7 +1235,7 @@
 
             <div class="teacher-copy">
               <span class="badge">🌟 Người đồng hành của em</span>
-              <h3>Cô Lan Anh sẽ cùng em biến ánh sáng thành câu chuyện khoa học dễ hiểu.</h3>
+              <h3>Cô Lan Anh sẽ cùng em biến ánh sáng thành <span class="keep-phrase">câu chuyện</span> khoa học dễ hiểu.</h3>
               <p>Cô Nguyễn Thị Lan Anh, giáo viên trực tiếp giảng dạy tại Trường THCS Đàm Quang Trung, sẽ cùng em khám phá tia sáng, thấu kính và lăng kính qua bài học, thí nghiệm và bài tập.</p>
               <div class="pill-row">
                 <span class="pill">💡 Dễ hiểu</span>
